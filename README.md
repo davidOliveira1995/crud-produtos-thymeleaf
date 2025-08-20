@@ -5,6 +5,18 @@ O projeto cobre tanto **API REST** quanto **páginas dinâmicas com Thymeleaf**.
 
 ---
 
+## 🖼️ Screenshots
+
+### 📬 Postman - testando API
+![Postman](printscreen/screen-postman.png)
+
+
+### 🌿 Thymeleaf - Lista de produtos
+
+![Thymeleaf](printscreen/screen-thym.png)
+
+---
+
 ## 🚀 Tecnologias que aprendi aqui
 
 - **Java** → Programação orientada a objetos, classes, atributos, construtores, getters e setters.  
@@ -35,6 +47,18 @@ O projeto cobre tanto **API REST** quanto **páginas dinâmicas com Thymeleaf**.
 - Usar banco de dados **em memória (H2)**.  
 - Entender o fluxo completo: **Model → Repository → Controller → View**.  
 
+---
+
+## 🔄 Melhorias (Atualização)
+
+### Validação de Dados
+
+Neste projeto, todos os produtos passam por validação antes de serem salvos:
+
+- **Nome**: obrigatório (`@NotEmpty`)  
+- **Preço**: obrigatório e deve ser positivo (`@NotNull` e `@Positive`)  
+
+  No **Controller**, o `@Valid` garante que o Spring verifique essas regras antes de persistir o produto. Caso algum dado esteja inválido, uma mensagem de erro é retornada, evitando que produtos inválidos sejam salvos no banco.
 ---
 
 ## 🛠️ Próximos Passos
