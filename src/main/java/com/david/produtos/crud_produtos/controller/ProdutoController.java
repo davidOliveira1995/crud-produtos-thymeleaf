@@ -2,6 +2,7 @@ package com.david.produtos.crud_produtos.controller;
 
 import com.david.produtos.crud_produtos.model.Produto;
 import com.david.produtos.crud_produtos.repository.ProdutoRepository;
+import jakarta.validation.Valid;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public Produto criar(@RequestBody  Produto produto) {
+    public Produto criar(@RequestBody @Valid Produto produto) {
 
 
             if (produto.getNome().isEmpty()) {
